@@ -1,5 +1,6 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { HijoComponent } from '../hijo/hijo.component';
+import { ServicioFamiliarService } from '../servicio-familiar.service';
 
 
 @Component({
@@ -13,14 +14,22 @@ import { HijoComponent } from '../hijo/hijo.component';
 })
 
 
-export class PadreComponent {
+export class PadreComponent implements OnInit {
+  nombre : string = '';
+  saludo : string = '';
 
-  value : number = 0;
+  constructor(
+    private  _servicioFamiliarService: ServicioFamiliarService,
+  ){}
 
-  aumentar(){
-    this.value ++ ;
+  ngOnInit(): void{
+    this._servicioFamiliarService.getNombreHermanoMayor();
   }
-  disminuir(){
-    this.value -- ;
+
+  ingresarNombre(){
+    this._servicioFamiliarService.setNombreHermanoMayor("Tamara");
+  }
+  saludar(){
+    this.saludo = this._servicioFamiliarService.saludar(this._servicioFamiliarService.getNombreHermanoMenor());
   }
 }

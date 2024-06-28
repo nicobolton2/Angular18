@@ -1,4 +1,5 @@
-import { Component, EventEmitter, Output } from '@angular/core';
+import { Component, EventEmitter, OnInit, Output } from '@angular/core';
+import { ServicioFamiliarService } from '../servicio-familiar.service';
 
 
 @Component({
@@ -9,16 +10,7 @@ import { Component, EventEmitter, Output } from '@angular/core';
   styleUrl: './hijo.component.css'
 })
 export class HijoComponent {
-  
-  @Output() parriba = new EventEmitter <any>;
-  @Output() pabajo = new EventEmitter <any>;
-  
-  
-  aumentar(){
-    this.parriba.emit();
-  }
-  disminuir(){
-    this.pabajo.emit();
-  }
+
  
+  
 }

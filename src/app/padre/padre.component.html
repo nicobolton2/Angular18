@@ -1,6 +1,4 @@
 <p>padre works!</p>
-<app-hijo 
-    (parriba)="aumentar()"
-    (pabajo)="disminuir()"
-></app-hijo>
-<h1>{{value}}</h1>
+<button type="button" (click)="ingresarNombre()">Ingresar Nombre</button>
+<button type="button" (click)="saludar()">Saludar a hermano menor</button>
+<h1>{{saludo}}</h1>
