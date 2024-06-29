@@ -1,5 +1,5 @@
 import { Component, EventEmitter, OnInit, Output } from '@angular/core';
-import { ServicioFamiliarService } from '../../../servicio-familiar.service';
+import { ServicioFamiliarService } from '../../../services/servicio-familiar.service';
 
 
 @Component({
