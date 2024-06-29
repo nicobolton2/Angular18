@@ -1,7 +1,7 @@
 import { Component } from '@angular/core';
 import { RouterOutlet } from '@angular/router';
-import { PadreComponent } from './padre/padre.component';
-import { HermanoComponent } from './hermano/hermano.component';
+import { PadreComponent } from './modules/familia/padre/padre.component';
+import { HermanoComponent } from './modules/familia/hermano/hermano.component';
 
 @Component({
   selector: 'app-root',

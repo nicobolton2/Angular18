@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { HijoComponent } from '../hijo/hijo.component';
-import { ServicioFamiliarService } from '../servicio-familiar.service';
+import { ServicioFamiliarService } from '../../../servicio-familiar.service';
 
 
 @Component({
